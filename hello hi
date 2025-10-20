@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monochrome Particles — Minimal Black & White Site</title>
+
+  <!-- Use an easy-to-read font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Meta for theme color -->
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <!-- Fullscreen canvas for particle background -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="logo" role="img" aria-label="Monochrome Particles logo">
+        <!-- Inline minimal SVG logo, black & white -->
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="22" height="22" rx="4" stroke="white" stroke-width="1.5"/>
+          <circle cx="12" cy="10" r="3" stroke="white" stroke-width="1.5"/>
+          <path d="M5 19c2-3 6-4 10-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <section class="hero container">
+      <div class="hero-content glass">
+        <h1>Black & White, blurred edges — alive with particles.</h1>
+        <p class="lead">A minimal, atmospheric site built around a responsive particle engine, subtle blur layers, and a carefully tuned monochrome palette.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#showcase">Explore the demo</a>
+          <a class="btn ghost" href="#contact">Get the code</a>
+        </div>
+      </div>
+
+      <!-- Decorative blurred card stack -->
+      <aside class="card-stack">
+        <article class="card glass small">
+          <h3>Performance</h3>
+          <p>Adaptive particle count and efficient canvas drawing keep frame rates high.</p>
+        </article>
+        <article class="card glass">
+          <h3>Accessibility</h3>
+          <p>High contrast, large typography, keyboard-accessible links and reduced-motion support.</p>
+        </article>
+        <article class="card glass small">
+          <h3>Customizable</h3>
+          <p>Tweak color variables, particle density, and blur strength in the CSS and JS.</p>
+        </article>
+      </aside>
+    </section>
+
+    <section id="about" class="container section">
+      <div class="glass panel">
+        <h2>About this template</h2>
+        <p>This is a single-page layout focusing on a monochrome visual identity with soft blur layers. Everything is purposely grayscale — no color distractions — and the particle field adds depth without overpowering the content.</p>
+      </div>
+    </section>
+
+    <section id="features" class="container section grid">
+      <div class="glass feature">
+        <h3>Interactive Particles</h3>
+        <p>Particles respond to your mouse: hover to attract, click for bursts. On touch devices, they follow the last touch point.</p>
+      </div>
+
+      <div class="glass feature">
+        <h3>Blurry Glass Panels</h3>
+        <p>Panels use backdrop-filter and translucent backgrounds for layered blur. Adjustable in CSS via --glass-blur and --glass-alpha.</p>
+      </div>
+
+      <div class="glass feature">
+        <h3>Grain & Contrast</h3>
+        <p>Subtle film grain and contrast tuning keep surfaces interesting in black & white.</p>
+      </div>
+
+      <div class="glass feature">
+        <h3>Performance-minded</h3>
+        <p>Canvas is sized to DPR, particles are capped and recycled; frames drop gracefully when the tab is hidden.</p>
+      </div>
+    </section>
+
+    <section id="showcase" class="container section">
+      <h2>Showcase</h2>
+
+      <div class="showcase-grid">
+        <!-- Demonstration cards with placeholder SVGs -->
+        <figure class="showcase-item glass">
+          <svg viewBox="0 0 200 120" class="placeholder-art" role="img" aria-label="Black and white abstract art">
+            <rect width="200" height="120" fill="#111"/>
+            <circle cx="60" cy="60" r="36" fill="#fff" opacity="0.08"/>
+            <path d="M130 40c20 20 0 48-28 52" stroke="#fff" stroke-opacity="0.14" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <figcaption>Abstract composition with blur overlay</figcaption>
+        </figure>
+
+        <figure class="showcase-item glass">
+          <svg viewBox="0 0 200 120" class="placeholder-art" role="img" aria-label="Black and white composition">
+            <rect width="200" height="120" fill="#111"/>
+            <rect x="20" y="18" width="160" height="84" rx="8" fill="#fff" opacity="0.03"/>
+            <circle cx="150" cy="90" r="18" fill="#fff" opacity="0.06"/>
+          </svg>
+          <figcaption>Card layout with soft highlights</figcaption>
+        </figure>
+
+        <figure class="showcase-item glass">
+          <svg viewBox="0 0 200 120" class="placeholder-art" role="img" aria-label="Minimal composition">
+            <rect width="200" height="120" fill="#111"/>
+            <path d="M40 20 L160 100" stroke="#fff" stroke-opacity="0.08" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+          <figcaption>Minimal line art</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <div class="glass panel">
+        <h2>Contact</h2>
+        <p>If you'd like this adapted, drop a message. The code is ready to be cloned and customized.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Demo only — hook up your backend!');">
+          <label>
+            <span class="visually-hidden">Name</span>
+            <input type="text" placeholder="Your name" required>
+          </label>
+          <label>
+            <span class="visually-hidden">Message</span>
+            <textarea placeholder="Tell me what you'd like" rows="4" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send</button>
+            <button type="button" class="btn ghost" onclick="copyRepoInstructions()">Copy setup instructions</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with monochrome pixels and gentle blur. — <a href="#" onclick="event.preventDefault(); alert('Demo only')">License</a></p>
+    </div>
+  </footer>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
